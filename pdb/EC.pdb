@@ -1,0 +1,24 @@
+REMARK   Materials Studio PDB file
+REMARK   Created:  Thu Mar 05 07:16:07 +0800 2026
+ATOM      1  O1  MOL C   1       0.009   1.117   0.018  1.00  0.00           O    
+ATOM      2  O2  MOL C   1       0.009  -1.117  -0.017  1.00  0.00           O    
+ATOM      3  O3  MOL C   1       1.978  -0.000  -0.000  1.00  0.00           O1-  
+ATOM      4  C4  MOL C   1      -1.371   0.745   0.174  1.00  0.00           C    
+ATOM      5  C5  MOL C   1      -1.371  -0.745  -0.173  1.00  0.00           C    
+ATOM      6  C6  MOL C   1       0.790  -0.000  -0.000  1.00  0.00           C    
+ATOM      7  H7  MOL C   1      -1.969   1.352  -0.500  1.00  0.00           H    
+ATOM      8  H8  MOL C   1      -1.667   0.937   1.205  1.00  0.00           H    
+ATOM      9  H9  MOL C   1      -1.969  -1.352   0.501  1.00  0.00           H    
+ATOM     10  H10 MOL C   1      -1.667  -0.937  -1.205  1.00  0.00           H    
+TER      11 
+CONECT    1    4    6
+CONECT    2    5    6
+CONECT    3    6
+CONECT    4    1    5    7    8
+CONECT    5    2    4    9   10
+CONECT    6    1    2    3
+CONECT    7    4
+CONECT    8    4
+CONECT    9    5
+CONECT   10    5
+END
