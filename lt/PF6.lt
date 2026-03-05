@@ -1,0 +1,100 @@
+PF6 {
+  write_once("In Settings") {
+    pair_coeff @atom:P1 @atom:P1 0.200 3.7400000
+    pair_coeff @atom:F2 @atom:F2 0.061 3.1181000
+    pair_coeff @atom:F3 @atom:F3 0.061 3.1181000
+    pair_coeff @atom:F4 @atom:F4 0.061 3.1181000
+    pair_coeff @atom:F5 @atom:F5 0.061 3.1181000
+    pair_coeff @atom:F6 @atom:F6 0.061 3.1181000
+    pair_coeff @atom:F7 @atom:F7 0.061 3.1181000
+  }
+
+  write_once("In Settings") {
+    bond_coeff @bond:b1 370.46 1.606
+    bond_coeff @bond:b2 370.46 1.606
+    bond_coeff @bond:b3 370.46 1.606
+    bond_coeff @bond:b4 370.46 1.606
+    bond_coeff @bond:b5 370.46 1.606
+    bond_coeff @bond:b6 370.46 1.606
+
+  }
+
+  write_once("In Settings") {
+    angle_coeff @angle:a1 139.22 90.000
+    angle_coeff @angle:a2 139.22 90.000
+    angle_coeff @angle:a3 139.22 90.000
+    angle_coeff @angle:a4 139.22 90.000
+    angle_coeff @angle:a5 139.22 90.000
+    angle_coeff @angle:a6 139.22 90.000
+    angle_coeff @angle:a7 139.22 90.000
+    angle_coeff @angle:a8 139.22 90.000
+    angle_coeff @angle:a9 139.22 90.000
+    angle_coeff @angle:a10 139.22 90.000
+    angle_coeff @angle:a11 139.22 90.000
+    angle_coeff @angle:a12 139.22 90.000
+    angle_coeff @angle:a13 139.22 180.000
+    angle_coeff @angle:a14 139.22 180.000
+    angle_coeff @angle:a15 139.22 180.000
+
+  }
+  #  atomId molId atomType charge X Y Z
+
+  write("Data Atoms"){
+    $atom:P1 $mol:m @atom:P1 1.072 -1.974 1.602 -1.524
+    $atom:F2 $mol:m @atom:F2 -0.312 -2.589 1.147 -2.975
+    $atom:F3 $mol:m @atom:F3 -0.312 -2.573 3.113 -1.744
+    $atom:F4 $mol:m @atom:F4 -0.312 -1.359 2.057 -0.073
+    $atom:F5 $mol:m @atom:F5 -0.312 -3.371 1.155 -0.788
+    $atom:F6 $mol:m @atom:F6 -0.312 -1.375 0.091 -1.304
+    $atom:F7 $mol:m @atom:F7 -0.312 -0.577 2.049 -2.26
+  } # Atoms section
+
+  #  bondId  atomId1 atomId2
+
+  write("Data Bond List") {
+    $bond:b1  $atom:F2  $atom:P1
+    $bond:b2  $atom:F3  $atom:P1
+    $bond:b3  $atom:F4  $atom:P1
+    $bond:b4  $atom:F5  $atom:P1
+    $bond:b5  $atom:F6  $atom:P1
+    $bond:b6  $atom:F7  $atom:P1
+  } # Bonds section
+    write("Data Angles") {
+    $angle:id1 @angle:a1 $atom:F2 $atom:P1 $atom:F3
+    $angle:id2 @angle:a2 $atom:F2 $atom:P1 $atom:F5
+    $angle:id3 @angle:a3 $atom:F2 $atom:P1 $atom:F6
+    $angle:id4 @angle:a4 $atom:F2 $atom:P1 $atom:F7
+    $angle:id5 @angle:a5 $atom:F3 $atom:P1 $atom:F4
+    $angle:id6 @angle:a6 $atom:F3 $atom:P1 $atom:F5
+    $angle:id7 @angle:a7 $atom:F3 $atom:P1 $atom:F7
+    $angle:id8 @angle:a8 $atom:F4 $atom:P1 $atom:F5
+    $angle:id9 @angle:a9 $atom:F4 $atom:P1 $atom:F6
+    $angle:id10 @angle:a10 $atom:F4 $atom:P1 $atom:F7
+    $angle:id11 @angle:a11 $atom:F5 $atom:P1 $atom:F6
+    $angle:id12 @angle:a12 $atom:F6 $atom:P1 $atom:F7
+    $angle:id13 @angle:a13 $atom:F2 $atom:P1 $atom:F4
+	$angle:id14 @angle:a14 $atom:F3 $atom:P1 $atom:F6
+	$angle:id15 @angle:a15 $atom:F5 $atom:P1 $atom:F7
+  }
+}  # PF6
+
+
+
+
+
+
+# -------- INSTRUCTIONS FOR USING THIS FILE: --------
+# So far, we have just defined (one or more) molecular subunits.
+# If you want to use these molecule(s) in a simulation, you must instantiate
+# copies of them.  To do that you would the "new" command.  For example:
+#
+# MO1_instance = new MO1
+#
+# You could either put this command here, or in a separate file.
+# (...Such as "system.lt".  In that case remember to use moltemplate's
+#  "import" command to import this file beforehand because you must ensure
+#  that the molecules in this file are loaded before they are used.)
+#
+# Note: You can also modify the position and orientation of each copy
+# using the .move() and .rot() commands.  (See the moltemplate manual.)
+# ---------------------------------------------------

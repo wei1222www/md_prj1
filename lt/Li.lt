@@ -1,0 +1,22 @@
+Li {
+  write_once("In Settings") {
+  #  (epsilon, sigma)
+    pair_coeff @atom:Li @atom:Li 0.0183 2.12645
+	}
+  #  atomId molId atomType charge X Y Z
+  write_once("Data Masses") {
+    @atom:Li 6.941
+	}
+  write("Data Atoms"){
+    $atom:Li1 $mol:m @atom:Li 0.8 -1.762 0.136 0.0
+  } # Atoms section
+
+  #  bondId  atomId1 atomId2
+
+  write("Data Bond List") {
+  } # Bonds section
+
+}  # Li
+
+
+

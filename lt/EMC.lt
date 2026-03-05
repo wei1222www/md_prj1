@@ -1,0 +1,219 @@
+EMC {
+
+  ### LAMMPS commands for initialization
+  ### (These can be overridden later.)
+
+
+  write_once("In Init") {
+    atom_style full
+  }
+
+  write_once("In Settings") {
+    pair_coeff @atom:O1 @atom:O1 0.210 2.9600000
+    pair_coeff @atom:C2 @atom:C2 0.070 3.5500000
+    pair_coeff @atom:O3 @atom:O3 0.140 2.9000000
+    pair_coeff @atom:O4 @atom:O4 0.140 2.9000000
+    pair_coeff @atom:C5 @atom:C5 0.066 3.5000000
+    pair_coeff @atom:C6 @atom:C6 0.066 3.5000000
+    pair_coeff @atom:C7 @atom:C7 0.066 3.5000000
+    pair_coeff @atom:H8 @atom:H8 0.030 2.5000000
+    pair_coeff @atom:H9 @atom:H9 0.030 2.5000000
+    pair_coeff @atom:H10 @atom:H10 0.030 2.5000000
+    pair_coeff @atom:H11 @atom:H11 0.030 2.5000000
+    pair_coeff @atom:H12 @atom:H12 0.030 2.5000000
+    pair_coeff @atom:H13 @atom:H13 0.030 2.5000000
+    pair_coeff @atom:H14 @atom:H14 0.030 2.5000000
+    pair_coeff @atom:H15 @atom:H15 0.030 2.5000000
+  }
+
+  write_once("In Settings") {
+    bond_coeff @bond:EMC_C2_O1 570.0000 1.2290
+    bond_coeff @bond:EMC_O3_C2 214.0000 1.3270
+    bond_coeff @bond:EMC_O4_C2 214.0000 1.3270
+    bond_coeff @bond:EMC_C5_O3 320.0000 1.4100
+    bond_coeff @bond:EMC_C6_O4 320.0000 1.4100
+    bond_coeff @bond:EMC_C7_C5 268.0000 1.5290
+    bond_coeff @bond:EMC_H8_C5 340.0000 1.0900
+    bond_coeff @bond:EMC_H9_C5 340.0000 1.0900
+    bond_coeff @bond:EMC_H10_C7 340.0000 1.0900
+    bond_coeff @bond:EMC_H11_C7 340.0000 1.0900
+    bond_coeff @bond:EMC_H12_C7 340.0000 1.0900
+    bond_coeff @bond:EMC_H13_C6 340.0000 1.0900
+    bond_coeff @bond:EMC_H14_C6 340.0000 1.0900
+    bond_coeff @bond:EMC_H15_C6 340.0000 1.0900
+  }
+
+  write_once("In Settings") {
+    angle_coeff @angle:EMC_O1_C2_O3 83.000 123.400
+    angle_coeff @angle:EMC_O1_C2_O4 83.000 123.400
+    angle_coeff @angle:EMC_C2_O3_C5 83.000 116.900
+    angle_coeff @angle:EMC_C2_O4_C6 83.000 116.900
+    angle_coeff @angle:EMC_O3_C5_C7 50.000 109.500
+    angle_coeff @angle:EMC_O3_C5_H8 35.000 109.500
+    angle_coeff @angle:EMC_O3_C5_H9 35.000 109.500
+    angle_coeff @angle:EMC_C5_C7_H10 37.500 110.700
+    angle_coeff @angle:EMC_C5_C7_H11 37.500 110.700
+    angle_coeff @angle:EMC_C5_C7_H12 37.500 110.700
+    angle_coeff @angle:EMC_O4_C6_H13 35.000 109.500
+    angle_coeff @angle:EMC_O4_C6_H14 35.000 109.500
+    angle_coeff @angle:EMC_O4_C6_H15 35.000 109.500
+    angle_coeff @angle:EMC_H11_C7_H12 33.000 107.800
+    angle_coeff @angle:EMC_H13_C6_H15 33.000 107.800
+    angle_coeff @angle:EMC_C7_C5_H9 37.500 110.700
+    angle_coeff @angle:EMC_H10_C7_H12 33.000 107.800
+    angle_coeff @angle:EMC_O3_C2_O4 69.900 118.180
+    angle_coeff @angle:EMC_H13_C6_H14 33.000 107.800
+    angle_coeff @angle:EMC_H14_C6_H15 33.000 107.800
+    angle_coeff @angle:EMC_H10_C7_H11 33.000 107.800
+    angle_coeff @angle:EMC_C7_C5_H8 37.500 110.700
+    angle_coeff @angle:EMC_H8_C5_H9 33.000 107.800
+  }
+
+  write_once("In Settings") {
+    dihedral_coeff @dihedral:EMC_C5_O3_C2_O1 0.000 5.124 0.000 0.000
+    dihedral_coeff @dihedral:EMC_C6_O4_C2_O1 0.000 5.124 0.000 0.000
+    dihedral_coeff @dihedral:EMC_C7_C5_O3_C2 -1.220 -0.126 0.422 0.000
+    dihedral_coeff @dihedral:EMC_H10_C7_C5_O3 0.000 0.000 0.468 0.000
+    dihedral_coeff @dihedral:EMC_H13_C6_O4_C2 0.000 0.000 0.198 0.000
+    dihedral_coeff @dihedral:EMC_H14_C6_O4_C2 0.000 0.000 0.198 0.000
+    dihedral_coeff @dihedral:EMC_H12_C7_C5_H8 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_C5_O3_C2_O4 4.669 5.124 0.000 0.000
+    dihedral_coeff @dihedral:EMC_H11_C7_C5_H9 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_H9_C5_O3_C2 0.000 0.000 0.198 0.000
+    dihedral_coeff @dihedral:EMC_H15_C6_O4_C2 0.000 0.000 0.198 0.000
+    dihedral_coeff @dihedral:EMC_H8_C5_O3_C2 0.000 0.000 0.198 0.000
+    dihedral_coeff @dihedral:EMC_H11_C7_C5_O3 0.000 0.000 0.468 0.000
+    dihedral_coeff @dihedral:EMC_H12_C7_C5_H9 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_H10_C7_C5_H8 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_H10_C7_C5_H9 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_H11_C7_C5_H8 0.000 0.000 0.300 0.000
+    dihedral_coeff @dihedral:EMC_H12_C7_C5_O3 0.000 0.000 0.468 0.000
+    dihedral_coeff @dihedral:EMC_C6_O4_C2_O3 4.669 5.124 0.000 0.000
+  }
+
+  write_once("In Settings") {
+    improper_coeff @improper:EMC_C2_O1_O3_O4 10.500 -1 2
+    improper_coeff @improper:EMC_C5_O3_C7_H8 0.000 -1 2
+    improper_coeff @improper:EMC_C5_H9_O3_C7 0.000 -1 2
+    improper_coeff @improper:EMC_C7_H10_H11_C5 0.000 -1 2
+    improper_coeff @improper:EMC_C7_H10_H12_C5 0.000 -1 2
+    improper_coeff @improper:EMC_C6_O4_H13_H14 0.000 -1 2
+    improper_coeff @improper:EMC_C6_O4_H13_H15 0.000 -1 2
+  }
+
+
+  ### DATA sections
+
+
+  write_once("Data Masses") {
+    @atom:O1 15.999
+    @atom:C2 12.011
+    @atom:O3 15.999
+    @atom:O4 15.999
+    @atom:C5 12.011
+    @atom:C6 12.011
+    @atom:C7 12.011
+    @atom:H8 1.008
+    @atom:H9 1.008
+    @atom:H10 1.008
+    @atom:H11 1.008
+    @atom:H12 1.008
+    @atom:H13 1.008
+    @atom:H14 1.008
+    @atom:H15 1.008
+  }
+
+  write("Data Atoms") {
+    $atom:O1 $mol:m1 @atom:O1 -0.50430000 1.000 1.00000 0.00000
+    $atom:C2 $mol:m1 @atom:C2 0.57770000 -0.207 1.00000 0.00000
+    $atom:O3 $mol:m1 @atom:O3 -0.33870000 -0.997 1.00000 1.08233
+    $atom:O4 $mol:m1 @atom:O4 -0.33120000 -0.997 1.00137 -1.08531
+    $atom:C5 $mol:m1 @atom:C5 0.02940000 -0.302 1.00000 2.35735
+    $atom:C6 $mol:m1 @atom:C6 -0.03150000 -0.304 1.00297 -2.34832
+    $atom:C7 $mol:m1 @atom:C7 -0.24720000 -1.349 0.99818 3.44739
+    $atom:H8 $mol:m1 @atom:H8 0.10620000 0.336 0.11805 2.40454
+    $atom:H9 $mol:m1 @atom:H9 0.10620000 0.335 1.88234 2.40616
+    $atom:H10 $mol:m1 @atom:H10 0.10340000 -0.862 0.99683 4.42374
+    $atom:H11 $mol:m1 @atom:H11 0.10340000 -1.981 1.88427 3.38218
+    $atom:H12 $mol:m1 @atom:H12 0.10340000 -1.981 0.11270 3.37886
+    $atom:H13 $mol:m1 @atom:H13 0.10770000 0.319 1.89062 -2.43760
+    $atom:H14 $mol:m1 @atom:H14 0.10770000 -1.084 1.00404 -3.10116
+    $atom:H15 $mol:m1 @atom:H15 0.10770000 0.321 0.11667 -2.43890
+  }
+
+  write("Data Bonds") {
+    $bond:id1 @bond:EMC_C2_O1 $atom:C2 $atom:O1
+    $bond:id2 @bond:EMC_O3_C2 $atom:O3 $atom:C2
+    $bond:id3 @bond:EMC_O4_C2 $atom:O4 $atom:C2
+    $bond:id4 @bond:EMC_C5_O3 $atom:C5 $atom:O3
+    $bond:id5 @bond:EMC_C6_O4 $atom:C6 $atom:O4
+    $bond:id6 @bond:EMC_C7_C5 $atom:C7 $atom:C5
+    $bond:id7 @bond:EMC_H8_C5 $atom:H8 $atom:C5
+    $bond:id8 @bond:EMC_H9_C5 $atom:H9 $atom:C5
+    $bond:id9 @bond:EMC_H10_C7 $atom:H10 $atom:C7
+    $bond:id10 @bond:EMC_H11_C7 $atom:H11 $atom:C7
+    $bond:id11 @bond:EMC_H12_C7 $atom:H12 $atom:C7
+    $bond:id12 @bond:EMC_H13_C6 $atom:H13 $atom:C6
+    $bond:id13 @bond:EMC_H14_C6 $atom:H14 $atom:C6
+    $bond:id14 @bond:EMC_H15_C6 $atom:H15 $atom:C6
+  }
+
+  write("Data Angles") {
+    $angle:id1 @angle:EMC_O1_C2_O3 $atom:O1 $atom:C2 $atom:O3
+    $angle:id2 @angle:EMC_O1_C2_O4 $atom:O1 $atom:C2 $atom:O4
+    $angle:id3 @angle:EMC_C2_O3_C5 $atom:C2 $atom:O3 $atom:C5
+    $angle:id4 @angle:EMC_C2_O4_C6 $atom:C2 $atom:O4 $atom:C6
+    $angle:id5 @angle:EMC_O3_C5_C7 $atom:O3 $atom:C5 $atom:C7
+    $angle:id6 @angle:EMC_O3_C5_H8 $atom:O3 $atom:C5 $atom:H8
+    $angle:id7 @angle:EMC_O3_C5_H9 $atom:O3 $atom:C5 $atom:H9
+    $angle:id8 @angle:EMC_C5_C7_H10 $atom:C5 $atom:C7 $atom:H10
+    $angle:id9 @angle:EMC_C5_C7_H11 $atom:C5 $atom:C7 $atom:H11
+    $angle:id10 @angle:EMC_C5_C7_H12 $atom:C5 $atom:C7 $atom:H12
+    $angle:id11 @angle:EMC_O4_C6_H13 $atom:O4 $atom:C6 $atom:H13
+    $angle:id12 @angle:EMC_O4_C6_H14 $atom:O4 $atom:C6 $atom:H14
+    $angle:id13 @angle:EMC_O4_C6_H15 $atom:O4 $atom:C6 $atom:H15
+    $angle:id14 @angle:EMC_H11_C7_H12 $atom:H11 $atom:C7 $atom:H12
+    $angle:id15 @angle:EMC_H13_C6_H15 $atom:H13 $atom:C6 $atom:H15
+    $angle:id16 @angle:EMC_C7_C5_H9 $atom:C7 $atom:C5 $atom:H9
+    $angle:id17 @angle:EMC_H10_C7_H12 $atom:H10 $atom:C7 $atom:H12
+    $angle:id18 @angle:EMC_O3_C2_O4 $atom:O3 $atom:C2 $atom:O4
+    $angle:id19 @angle:EMC_H13_C6_H14 $atom:H13 $atom:C6 $atom:H14
+    $angle:id20 @angle:EMC_H14_C6_H15 $atom:H14 $atom:C6 $atom:H15
+    $angle:id21 @angle:EMC_H10_C7_H11 $atom:H10 $atom:C7 $atom:H11
+    $angle:id22 @angle:EMC_C7_C5_H8 $atom:C7 $atom:C5 $atom:H8
+    $angle:id23 @angle:EMC_H8_C5_H9 $atom:H8 $atom:C5 $atom:H9
+  }
+
+  write("Data Dihedrals") {
+    $dihedral:id1 @dihedral:EMC_C5_O3_C2_O1 $atom:C5 $atom:O3 $atom:C2 $atom:O1
+    $dihedral:id2 @dihedral:EMC_C6_O4_C2_O1 $atom:C6 $atom:O4 $atom:C2 $atom:O1
+    $dihedral:id3 @dihedral:EMC_C7_C5_O3_C2 $atom:C7 $atom:C5 $atom:O3 $atom:C2
+    $dihedral:id4 @dihedral:EMC_H10_C7_C5_O3 $atom:H10 $atom:C7 $atom:C5 $atom:O3
+    $dihedral:id5 @dihedral:EMC_H13_C6_O4_C2 $atom:H13 $atom:C6 $atom:O4 $atom:C2
+    $dihedral:id6 @dihedral:EMC_H14_C6_O4_C2 $atom:H14 $atom:C6 $atom:O4 $atom:C2
+    $dihedral:id7 @dihedral:EMC_H12_C7_C5_H8 $atom:H12 $atom:C7 $atom:C5 $atom:H8
+    $dihedral:id8 @dihedral:EMC_C5_O3_C2_O4 $atom:C5 $atom:O3 $atom:C2 $atom:O4
+    $dihedral:id9 @dihedral:EMC_H11_C7_C5_H9 $atom:H11 $atom:C7 $atom:C5 $atom:H9
+    $dihedral:id10 @dihedral:EMC_H9_C5_O3_C2 $atom:H9 $atom:C5 $atom:O3 $atom:C2
+    $dihedral:id11 @dihedral:EMC_H15_C6_O4_C2 $atom:H15 $atom:C6 $atom:O4 $atom:C2
+    $dihedral:id12 @dihedral:EMC_H8_C5_O3_C2 $atom:H8 $atom:C5 $atom:O3 $atom:C2
+    $dihedral:id13 @dihedral:EMC_H11_C7_C5_O3 $atom:H11 $atom:C7 $atom:C5 $atom:O3
+    $dihedral:id14 @dihedral:EMC_H12_C7_C5_H9 $atom:H12 $atom:C7 $atom:C5 $atom:H9
+    $dihedral:id15 @dihedral:EMC_H10_C7_C5_H8 $atom:H10 $atom:C7 $atom:C5 $atom:H8
+    $dihedral:id16 @dihedral:EMC_H10_C7_C5_H9 $atom:H10 $atom:C7 $atom:C5 $atom:H9
+    $dihedral:id17 @dihedral:EMC_H11_C7_C5_H8 $atom:H11 $atom:C7 $atom:C5 $atom:H8
+    $dihedral:id18 @dihedral:EMC_H12_C7_C5_O3 $atom:H12 $atom:C7 $atom:C5 $atom:O3
+    $dihedral:id19 @dihedral:EMC_C6_O4_C2_O3 $atom:C6 $atom:O4 $atom:C2 $atom:O3
+  }
+
+  write("Data Impropers") {
+    $improper:id1 @improper:EMC_C2_O1_O3_O4 $atom:C2 $atom:O1 $atom:O3 $atom:O4
+    $improper:id2 @improper:EMC_C5_O3_C7_H8 $atom:C5 $atom:O3 $atom:C7 $atom:H8
+    $improper:id3 @improper:EMC_C5_H9_O3_C7 $atom:C5 $atom:H9 $atom:O3 $atom:C7
+    $improper:id4 @improper:EMC_C7_H10_H11_C5 $atom:C7 $atom:H10 $atom:H11 $atom:C5
+    $improper:id5 @improper:EMC_C7_H10_H12_C5 $atom:C7 $atom:H10 $atom:H12 $atom:C5
+    $improper:id6 @improper:EMC_C6_O4_H13_H14 $atom:C6 $atom:O4 $atom:H13 $atom:H14
+    $improper:id7 @improper:EMC_C6_O4_H13_H15 $atom:C6 $atom:O4 $atom:H13 $atom:H15
+  }
+
+} # end of "EMC" type definition
